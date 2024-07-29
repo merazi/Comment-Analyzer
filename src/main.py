@@ -71,8 +71,16 @@ db_config = {
 }
 
 # Create the main application window
+#
+
+
 root = tk.Tk()
 root.title("Word Search in MariaDB")
+
+# theme
+theme_path = os.path.join(os.path.dirname(__file__), 'azure_theme', 'azure.tcl')
+root.tk.call('source', theme_path)
+root.tk.call('set_theme', 'dark')
 
 # Create a label and entry for search term
 search_label = tk.Label(root, text="Enter word to search:")
