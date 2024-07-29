@@ -60,12 +60,12 @@ def search_word():
 
 # Database connection details
 
-pass = input("Enter your password: ")
+password = input("Enter your password: ")
 host = os.environ['MYSQL_HOST_IP']
 
 db_config = {
     'user': 'grp1',
-    'password': pass,
+    'password': password,
     'host': host,
     'database': 'personas_cen'
 }
