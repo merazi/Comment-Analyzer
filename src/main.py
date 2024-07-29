@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import tkinter as tk
 from tkinter import scrolledtext, messagebox, ttk
 import mysql.connector
@@ -103,4 +101,3 @@ results_area.pack(pady=10)
 
 # Start the Tkinter event loop
 root.mainloop()
->>>>>>> 0d7dbf8 (using env variable to get the host now)
