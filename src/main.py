@@ -18,7 +18,7 @@ def fetch_ids():
         id_combobox.set('')  # Reset the combobox
 
     except mysql.connector.Error as err:
-        messagebox.showerror("Database Error", f"Error: {err}")
+        messagebox.showerror("Database Error", f"Can't connect to host")
 
     finally:
         if conn.is_connected():
@@ -61,7 +61,7 @@ def search_word():
 # Database connection details
 
 password = input("Enter your password: ")
-host = os.environ['MYSQL_HOST_IP']
+host = os.getenv("MYSQL_HOST_IP", "localhost")
 
 db_config = {
     'user': 'grp1',
